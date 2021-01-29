@@ -46,7 +46,8 @@
 
   YMapsMarkerField.prototype.initializeMap = function() {
 		if (!this.$mapContainer || !this.$mapContainer[0]) {
-			console.warn("Could not find ymaps-container for YMapsMarkerField (key: " +  this.$field.attr("data-key") || "undefined" + ")");
+			console.error("Could not find ymaps-container for YMapsMarkerField (key: " +  this.$field.attr("data-key") || "undefined" + ")");
+			return;
 		}
 
 		var self = this;

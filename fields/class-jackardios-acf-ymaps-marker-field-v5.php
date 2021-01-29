@@ -166,14 +166,14 @@ if (!class_exists('jackardios_acf_ymaps_marker_field')) :
             $url = $this->settings['url'];
             $version = $this->settings['version'];
 
-            $api = array(
-                'key' => acf_get_setting('ymaps_api_key'),
-                'language' => acf_get_locale()
+            $apiArgs = array(
+                'apikey' => acf_get_setting('ymaps_api_key'),
+                'lang' => acf_get_locale()
             );
-            $api = apply_filters('acf-field-ymaps-marker/api', $api);
+            $apiArgs = apply_filters('acf-field-ymaps-marker/ymaps-api-args', $apiArgs);
 
             // register & include JS
-            wp_register_script('afc-field-ymaps-marker/ymaps-api', 'https://api-maps.yandex.ru/2.1/?apikey=' . $api['key'] ?? '' . '&lang=' . $api['language'], array('jquery'), null);
+            wp_register_script('afc-field-ymaps-marker/ymaps-api', add_query_arg($apiArgs, 'https://api-maps.yandex.ru/2.1'), array('jquery'), null);
             wp_enqueue_script('afc-field-ymaps-marker/ymaps-api');
 
             wp_register_script('afc-field-ymaps-marker/input-js', "{$url}assets/js/input.js", array('acf-input', 'afc-field-ymaps-marker/ymaps-api'), $version);

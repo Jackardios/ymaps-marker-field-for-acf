@@ -1,4 +1,4 @@
-=== Yandex Map Marker Field for ACF ===
+=== Add Yandex Map Marker Field for ACF ===
 Contributors: Salakhutdinov Salavat
 Tags: Advanced Custom Fields, ACF, Yandex Maps Marker, Yandex, Maps, Map, Marker
 Requires at least: 5.0

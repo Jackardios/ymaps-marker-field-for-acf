@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: Yandex Maps Marker Field for ACF
+Plugin Name: Add Yandex Maps Marker Field for ACF
 Plugin URI: https://github.com/Jackardios/ymaps-marker-field-for-acf
 Description: Adds a new 'Yandex Maps Marker' field to Advanced Custom Fields plugin.
 Version: 1.0.0
